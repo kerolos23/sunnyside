@@ -1,0 +1,14 @@
+@use "../helper/var" as *;
+/// function for learn more link in text info 
+/// text-info($class number, $backgroundcolor-hover)
+
+@mixin text-info($number ,$back-color){
+    .#{$number}{
+        a{
+            @extend %learn-more;
+            &::after{
+                background-color: $back-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+$font-family: 'Fraunces', sans-serif;
+$another-family: 'Barlow', serif;
+//-------
+%learn-more {
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    color: #000;
+    text-decoration: none;
+    width: 8.5em;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 0.76em;
+        border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0.5em;
+        -ms-border-radius: 0.5em;
+        -o-border-radius: 0.5em;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        transition: .7s ease;
+        -webkit-transition: .7s ease;
+        -moz-transition: .7s ease;
+        -ms-transition: .7s ease;
+        -o-transition: .7s ease;
+        z-index: -1;
+    }
+    &:hover::after{
+        opacity: 1;
+    }
+}
+
+%info-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    gap: 2em;
+    line-height: 1.4em;
+    bottom: 0;
+    left: 0;
+}

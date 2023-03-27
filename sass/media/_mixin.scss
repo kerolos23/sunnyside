@@ -1,0 +1,146 @@
+
+@mixin media($mdm-body-font, $info-text-padding){
+    body{
+        font-size: $mdm-body-font;
+    }
+    header {
+        nav{
+            position: absolute;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            top: 15em;
+            right: 5%;
+            width: 65%;
+            height: 20em;
+            background: #fff;
+            opacity: 0;
+            transition: .7s ease;
+            -webkit-transition: .7s ease;
+            -moz-transition: .7s ease;
+            -ms-transition: .7s ease;
+            -o-transition: .7s ease;
+            a{
+                font-size: 1.5em;
+                color: #000;
+                font-weight: 600;
+                &:hover {
+                    background-color: #fad400;
+                    font-family: 'Barlow', serif;
+                }
+            }    
+        }
+        //this class for nav-bar when be open 
+        .open-nav{
+            opacity: 1;
+            top: 6em;
+        }
+
+        .burger{
+            display: flex;
+            position: relative;
+            width: 24px;
+            height: 17px;
+            div{
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: #fff;
+                transition: .6s ease;
+                -webkit-transition: .6s ease;
+                -moz-transition: .6s ease;
+                -ms-transition: .6s ease;
+                -o-transition: .6s ease;
+            }
+            .bar1{
+                top: 0;
+            }
+            .bar2{
+                top: 7px;
+            }
+            .bar3{
+                top: 14px;
+            }
+            //this classes when open navbar
+            .active{
+                opacity: 0;
+            }
+            .open{
+                top: 7px;
+            }
+            .rotat-1{
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+            }
+            .rotat-2{
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+            }
+        }
+    }
+    .welcome{
+        height: 100vb;
+        .image{
+            .welc-text{
+                h2{
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+    .counter{
+        .info{
+            flex-direction: column;
+            div{
+                width: 100%;
+            }
+            .text {
+                padding: $info-text-padding;
+                text-align: center;
+                align-items: center;
+            }
+        }
+        .services{
+            .cl-counter{
+                flex-direction: column;
+                gap: 3em;
+                .client{
+                    width: 100%;
+                }
+            }
+        }
+        .gallery{
+            flex-wrap: wrap;
+            overflow: hidden;
+            img{
+                width: calc(100% /2);
+            }
+        }
+    }
+    footer{
+        overflow: hidden;
+    }
+}
+
+/// media mixin for small disktop
+@mixin media-md(){
+    body{
+        font-size: 12px;
+    }
+    .welcome{
+        height: unset;
+    }
+}
+
+/// media mixin for large disktop
+@mixin media-lg($bd-font){
+    body{
+        font-size: $bd-font;
+    }
+}

@@ -1,0 +1,35 @@
+.welcome{
+    display: flex;
+    height: 100vb;
+    .image{
+        display: flex;
+        position: relative;
+        width: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .welc-text{
+            position: absolute;
+            width: 100%;
+            height: 100vb;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
+            color: #fff;
+            h2 {
+                font-size: 3em;
+                letter-spacing: .2em;
+            }
+            svg{
+                width: 36px;
+                height: 114px;
+            }
+        }
+    }
+}
